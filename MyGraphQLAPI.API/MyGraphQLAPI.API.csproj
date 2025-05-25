@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="HotChocolate" Version="16.0.0-p.2.0" />
+        <PackageReference Include="HotChocolate.AspNetCore" Version="16.0.0-p.2.0" />
+        <PackageReference Include="HotChocolate.Data" Version="16.0.0-p.2.0" />
+        <PackageReference Include="HotChocolate.Types.Errors" Version="16.0.0-p.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ MyGraphQLAPI.Domain\MyGraphQLAPI.Domain.csproj" />
+      <ProjectReference Include="..\MyGraphQLAPI.Application\MyGraphQLAPI.Application.csproj" />
+      <ProjectReference Include="..\MyGraphQLAPI.Infrastructure\MyGraphQLAPI.Infrastructure.csproj" />
+    </ItemGroup>
+
+</Project>
